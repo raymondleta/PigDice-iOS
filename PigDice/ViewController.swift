@@ -7,20 +7,24 @@
 //
 
 import UIKit
+import Loaf
+
 
 class ViewController: UIViewController {
-    @IBOutlet weak var leftDiceImage: UIImageView!
-    @IBOutlet weak var rightDiceImage: UIImageView!
+    @IBOutlet weak var rightDiceView: UIImageView!
+    @IBOutlet weak var leftDiceView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        leftDiceImage.image = #imageLiteral(resourceName: "DiceSix")
-        leftDiceImage.alpha = 0.5
-        rightDiceImage.image = #imageLiteral(resourceName: "DiceTwo")
+        rightDiceView.image = #imageLiteral(resourceName: "DiceSix")
+        leftDiceView.image = #imageLiteral(resourceName: "DiceTwo")
         
     }
 
 
+    @IBAction func rollButtonPressed(_ sender: UIButton) {
+        Loaf("Button clicked", state: .success, sender: self).show()
+    }
 }
 
