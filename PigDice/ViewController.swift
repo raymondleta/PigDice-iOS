@@ -21,7 +21,8 @@ class ViewController: UIViewController {
        leftDiceView.image = diceArray.randomElement()
        rightDiceView.image = diceArray.randomElement()
         
-        Loaf("Button clicked", state: .success, sender: self).show()
+//        Loaf("Button clicked", state: .success, sender: self).show()
+        Loaf("What is", state: .error, sender: self).show()
         
     }
 }
